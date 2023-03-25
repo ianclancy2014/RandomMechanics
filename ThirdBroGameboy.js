@@ -42,9 +42,11 @@ function willContinueToPlay(placeholder) {
   if (z == 0) {
     placeholder = false;
     console.log(placeholder);
+    return placeholder;
   } else if (z == 1) {
     placeholder = true;
     console.log(placeholder);
+    return placeholder;
   }
 }
 
@@ -53,6 +55,7 @@ function whoWantsToPlay() {
   willContinueToPlay(first);
   willContinueToPlay(second);
   willContinueToPlay(third);
+  console.log(father, first, second, third);
 }
 
 // while (i < 100) {
@@ -69,7 +72,7 @@ function whoWantsToPlay() {
 //   i = i + 1;
 // }
 
-console.log(whoWantsToPlay());
+whoWantsToPlay();
 
 console.log(
   fathersTurn,
