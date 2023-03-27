@@ -19,17 +19,10 @@ let third = false;
 
 let i = 0;
 
-while (i < 2) {
+while (i < 1) {
   whoWantsToPlay(father, first, second, third);
-  if (father == true) {
-    fathersTurn = fathersTurn + 1;
-  } else if (first == true) {
-    oldestBrothersTurn = oldestBrothersTurn + 1;
-  } else if (second == true) {
-    secondBrothersTurn = secondBrothersTurn + 1;
-  } else if (third == true) {
-    youngestBrothersTurn = youngestBrothersTurn + 1;
-  }
+  console.log(father, first, second, third);
+  whoWillPlay();
   i = i + 1;
   console.log(fathersTurn);
   console.log(oldestBrothersTurn);
@@ -64,6 +57,7 @@ function whoWantsToPlay(a, b, c, d) {
   let third = willContinueToPlay(d);
   console.log("the value is now " + third);
   console.log(father, first, second, third);
+  return father, first, second, third;
 }
 
 //The whoWillPlay function determines who will play based on the list gathered by the
@@ -73,23 +67,23 @@ function whoWantsToPlay(a, b, c, d) {
 //Probably gonna have to tinker with this one. I need to make sure the numbers
 //for the individual people don't go up if they don't have priority even if they still
 //check true
-// function whoWillPlay() {
-//   if (father == true) {
-//     fathersTurn = fathersTurn + 1;
-//     return fathersTurn;
-//   } else if (first == true) {
-//     oldestBrothersTurn = oldestBrothersTurn + 1;
-//     return oldestBrothersTurn;
-//   } else if (second == true) {
-//     secondBrothersTurn = secondBrothersTurn + 1;
-//     return secondBrothersTurn;
-//   } else if (third == true) {
-//     youngestBrothersTurn = youngestBrothersTurn + 1;
-//     return youngestBrothersTurn;
-//   }
-// }
+function whoWillPlay() {
+  if (father == true) {
+    fathersTurn = fathersTurn + 1;
+    return fathersTurn;
+  } else if (first == true) {
+    oldestBrothersTurn = oldestBrothersTurn + 1;
+    return oldestBrothersTurn;
+  } else if (second == true) {
+    secondBrothersTurn = secondBrothersTurn + 1;
+    return secondBrothersTurn;
+  } else if (third == true) {
+    youngestBrothersTurn = youngestBrothersTurn + 1;
+    return youngestBrothersTurn;
+  }
+}
 
-console.log();
+// console.log();
 
 // while (i < 100) {
 //   let turnToUseGameboy = Math.floor(Math.random() * 4);
