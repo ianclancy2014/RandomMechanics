@@ -19,7 +19,7 @@ let third = false;
 
 let i = 0;
 
-while (i < 1) {
+while (i < 14) {
   whoWantsToPlay(father, first, second, third);
   console.log(father, first, second, third);
   whoWillPlay();
@@ -48,13 +48,13 @@ function willContinueToPlay(placeholder) {
 
 //The whoWantsToPlay lists the people who want to play
 function whoWantsToPlay(a, b, c, d) {
-  let father = willContinueToPlay(a);
+  father = willContinueToPlay(a);
   console.log("the value is now " + father);
-  let first = willContinueToPlay(b);
+  first = willContinueToPlay(b);
   console.log("the value is now " + first);
-  let second = willContinueToPlay(c);
+  second = willContinueToPlay(c);
   console.log("the value is now " + second);
-  let third = willContinueToPlay(d);
+  third = willContinueToPlay(d);
   console.log("the value is now " + third);
   console.log(father, first, second, third);
   return father, first, second, third;
