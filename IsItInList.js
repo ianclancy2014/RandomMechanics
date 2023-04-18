@@ -22,4 +22,21 @@ function list2Builder() {
   console.log(list2);
 }
 
+let x = 6;
+let z = [1, 2, 3, 4, 5];
+let insideList = true;
+
+//Got it, using this logic :)
+function iterator() {
+  for (let item of z) {
+    if (item == x) {
+      insideList = false;
+      console.log(insideList);
+    } else {
+      continue;
+    }
+  }
+}
+
 list2Builder();
+iterator();
