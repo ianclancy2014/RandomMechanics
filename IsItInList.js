@@ -9,29 +9,34 @@ console.log("Begin IsItInList Program");
 let list1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let list2 = [];
 let numbersToPull = 5;
+let insideList = true;
+let b = Math.floor(Math.random() * list1.length);
 
 function list2Builder() {
-  //   let a = Math.floor(Math.random() * list1.length);
-  //   console.log(a);
   while (numbersToPull > 0) {
-    let b = Math.floor(Math.random() * list1.length);
-    console.log(list1[b]);
-    list2.push(list1[b]);
+    // let b = Math.floor(Math.random() * list1.length);
+    iterator();
+    if (insideList == true) {
+      list2.push(list1[b]);
+    } else {
+      numbersToPull = numbersToPull + 1;
+    }
+    insideList = true;
+    b = Math.floor(Math.random() * list1.length);
     numbersToPull = numbersToPull - 1;
+    console.log(insideList);
   }
   console.log(list2);
 }
 
-let x = 6;
+let x = 5;
 let z = [1, 2, 3, 4, 5];
-let insideList = true;
 
 //Got it, using this logic :)
 function iterator() {
-  for (let item of z) {
-    if (item == x) {
+  for (let item of list2) {
+    if (item == b) {
       insideList = false;
-      console.log(insideList);
     } else {
       continue;
     }
@@ -39,4 +44,4 @@ function iterator() {
 }
 
 list2Builder();
-iterator();
+// iterator();
